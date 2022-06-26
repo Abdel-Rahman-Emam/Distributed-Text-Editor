@@ -14,10 +14,13 @@ the URL in order to be able to access the project once closed and also be able t
 
 ## In order to run this project locally
 The project has to first be cloned locally to your file system - then the required node modules can be installed using
+
 ``` npm install ```
 Then using the terminal you'll first get into the server folder and run the command
+
 ``` npm run devStart ```
 Afterwards you'll have to cd to the client folder and run the command
+
 ``` npm start ```
 And then the project will be shared locally both in your device and the local area network.
      
