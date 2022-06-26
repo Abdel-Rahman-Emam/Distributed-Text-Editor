@@ -6,7 +6,8 @@
 
 ### This project is a collaborative text-editor where multiple users can access the document and edit in a real-time environment, the project was deployed with replication in mind and tried apply
 
-### Project Youtube demo https://youtu.be/RFZAxWQm4Js
+### Project Youtube demo 
+https://youtu.be/RFZAxWQm4Js
 
 ## In order to use this project
 The client can be found on: https://collab-editor-team12-client.herokuapp.com and by accessing the link a url for the document will be generated, save
@@ -26,4 +27,4 @@ Afterwards you'll have to cd to the client folder and run the command
 ``` npm start ```
 
 And then the project will be shared locally both in your device and the local area network.
-     
+
