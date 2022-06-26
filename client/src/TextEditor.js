@@ -28,10 +28,8 @@ export default function TextEditor() {
 
   useEffect(() => {
     
-    var s = io(process.env.PORT   || 'https://collab-editor-team12.herokuapp.com/' || `192.168.1.25:3001`)
+    var s = io(process.env.PORT   || 'collab-editor-team12.herokuapp.com/'|| 'collab-editor-team12-s2.herokuapp.com/' || `192.168.1.25:3001`)
     setSocket(s)
-    console.log(s.io.engine.hostname)
-    s = io(`${s.io.engine.hostname}:${process.env.PORT}`  || 'https://collab-editor-team12.herokuapp.com/' || `${s.io.engine.hostname}:3001`)
     return () => {
       s.disconnect()
     }
