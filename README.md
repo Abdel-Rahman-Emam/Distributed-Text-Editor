@@ -4,8 +4,7 @@
 ###        Hossam Eldin Mohamed Mostafa 18P4607
 ###        Amr Tarek Mohamed Reda Eldib 18P2992
 
-## This project is a collaborative text-editor where multiple users can access the document and edit in a real-time environment, the project was deployed with
-  replication in mind and tried apply
+## This project is a collaborative text-editor where multiple users can access the document and edit in a real-time environment, the project was deployed with replication in mind and tried apply
 
 ## In order to use this project
 The client can be found on: https://collab-editor-team12-client.herokuapp.com and by accessing the link a url for the document will be generated, save
