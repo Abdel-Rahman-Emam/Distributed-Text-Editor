@@ -26,6 +26,19 @@ export default function TextEditor() {
   const [socket, setSocket] = useState()
   const [quill, setQuill] = useState()
 
+   useEffect(() => {
+    if ( socket==null || quill == null) return 
+  
+    const handler = (Buffer, oldDelta, source) => { 
+      if (source !== "user") return
+      socket.emit("send-changes",Buffer)
+    }
+    quill.on("load-document", handler)
+    return () => {
+      quill.off("load-document", handler)
+    }
+  },[])
+  
   useEffect(() => {
     
     var s = io(process.env.PORT   || 'collab-editor-team12.herokuapp.com/'|| 'collab-editor-team12-s2.herokuapp.com/' || `192.168.1.25:3001`)
@@ -74,12 +87,15 @@ export default function TextEditor() {
   useEffect(() => {
     if (socket == null || quill == null) return
 
-    const handler = (delta, oldDelta, source) => {
+    const handler = (delta, oldDelta, source) => { 
       if (source !== "user") return
       socket.emit("send-changes", delta)
+      Buffer.unshift(delta.ops)
     }
+    socket.emit("send-changes", Buffer)
+  
     quill.on("text-change", handler)
-
+  
     return () => {
       quill.off("text-change", handler)
     }
